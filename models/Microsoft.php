@@ -23,7 +23,7 @@ class Microsoft extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'microsoft_activities';
+        return '{{microsoft}}';
     }
 
     /**

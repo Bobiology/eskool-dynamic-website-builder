@@ -24,7 +24,7 @@ class Staff extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'staff';
+        return '{{staff}}';
     }
 
     /**

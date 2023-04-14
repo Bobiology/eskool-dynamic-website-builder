@@ -6,13 +6,13 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Courses $model */
 
-$this->title = $model->course_code;
-$this->params['breadcrumbs'][] = ['label' => 'Courses', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $model->course_name;
+//$this->params['breadcrumbs'][] = ['label' => 'Courses', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="courses-view">
-
+    <span style="margin-bottom: 20px"><?= Html::a('<<< Back To Courses',['/courses/index'],['class'=>'btn btn-primary']) ?></span> <br/> <br/>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>

@@ -6,13 +6,13 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Cisco $model */
 
-$this->title = $model->activity_id;
-$this->params['breadcrumbs'][] = ['label' => 'Cisco Academies', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $model->activity_name;
+//$this->params['breadcrumbs'][] = ['label' => 'Cisco Academies', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="cisco-academy-view">
-
+    <span style="margin-bottom: 20px"><?= Html::a('<<< Back To Cisco Activities',['/cisco/index'],['class'=>'btn btn-primary']) ?></span> <br/> <br/>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>

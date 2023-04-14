@@ -61,26 +61,13 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionIndex(): string
     {
         //return $this->render('index');
         $courses = Courses::find() ->all();
-        return $this->render('home',['courses' =>$courses]);
+        return $this->render('index');
     }
 
-    public function actionCreate(){
-        $course = new Courses();
-        $formData = Yii::$app->request->post();
-        if ($course->load($formData)){
-           if ($course->save()){
-               Yii::$app->getSession()->setFlash('message', 'Courses created successfully');
-               return $this->redirect(['index']);
-           }else{
-               Yii::$app->getSession()->getFlash('message','Failed to Save');
-           }
-        }
-        return $this->render('createCourse',['course' => $course]);
-    }
     /**
      * Login action.
      *
@@ -89,12 +76,12 @@ class SiteController extends Controller
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->goBack();
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->render('../home/index');
         }
 
         $model->password = '';

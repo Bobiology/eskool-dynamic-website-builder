@@ -11,10 +11,9 @@ use yii\grid\GridView;
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Courses';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="courses-index">
-
+        <span style="margin-bottom: 20px"><?= Html::a('<<< Home',['/home/index'],['class'=>'btn btn-primary']) ?></span> <br/> <br/>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>

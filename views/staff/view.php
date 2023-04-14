@@ -6,13 +6,13 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Staff $model */
 
-$this->title = $model->usr_id;
+$this->title = $model->usr_full_name;
 $this->params['breadcrumbs'][] = ['label' => 'Staff', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="staff-view">
-
+    <span style="margin-bottom: 20px"><?= Html::a('<<< Back To Staff',['/staff/index'],['class'=>'btn btn-primary']) ?></span> <br/> <br/>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>

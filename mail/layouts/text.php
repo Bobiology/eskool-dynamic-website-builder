@@ -3,7 +3,7 @@
 /** 
  * @var yii\web\View $this view component instance
  * @var yii\mail\BaseMessage $message the message being composed
- * @var string $content main view render result
+ * @var string $content main.php view render result
  */
 
 $this->beginPage();

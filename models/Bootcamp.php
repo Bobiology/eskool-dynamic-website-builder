@@ -23,7 +23,7 @@ class Bootcamp extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'bootcamp_activities';
+        return '{{bootcamp}}';
     }
 
     /**

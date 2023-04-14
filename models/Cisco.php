@@ -23,7 +23,7 @@ class Cisco extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'cisco_academy';
+        return '{{cisco}}';
     }
 
     /**

@@ -6,13 +6,13 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Communications $model */
 
-$this->title = $model->comm_id;
-$this->params['breadcrumbs'][] = ['label' => 'Communications', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $model->topic;
+//$this->params['breadcrumbs'][] = ['label' => 'Communications', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="communications-view">
-
+    <span style="margin-bottom: 20px"><?= Html::a('<<< Back To Communications',['/communications/index'],['class'=>'btn btn-primary']) ?></span> <br/> <br/>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
